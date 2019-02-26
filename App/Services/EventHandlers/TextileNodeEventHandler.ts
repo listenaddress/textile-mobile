@@ -16,13 +16,13 @@ import { groupActions } from '../../features/group'
 export default class TextileNodeEventHandler {
   store: Store<RootState>
   events = new Events()
-
   constructor(store: Store<RootState>) {
     this.store = store
     this.setup()
   }
 
   setup () {
+
     // Now handled internally by sdk
     this.events.addListener('onOnline', () => {
       this.store.dispatch(TextileEventsActions.nodeOnline())
@@ -108,5 +108,6 @@ export default class TextileNodeEventHandler {
 
   tearDown () {
     this.events.removeAllListeners()
+    this.camera.tearDown()
   }
 }
