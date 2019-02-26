@@ -108,6 +108,5 @@ export default class TextileNodeEventHandler {
 
   tearDown () {
     this.events.removeAllListeners()
-    this.camera.tearDown()
   }
 }
