@@ -9,7 +9,7 @@
     "lint": "tslint -c tslint.json --project ."
   },
   "dependencies": {
-    "@textile/react-native-camera-roll": "file:../CameraRoll",
+    "@textile/react-native-camera-roll": "1.0.1",
     "@textile/react-native-icon": "^1.0.0",
     "@textile/react-native-screen-control": "1.0.12",
     "@textile/react-native-sdk": "1.1.0-rc27",
