@@ -13,7 +13,7 @@
     "@textile/react-native-screen-control": "1.0.12",
     "@textile/react-native-sdk": "1.1.0-rc27",
     "@textile/redux-saga-wait-for": "1.0.1",
-    "@textile/react-native-camera-roll": "file:../CameraRoll",
+    "@textile/react-native-camera-roll": "@textile/react-native-camera-roll",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
