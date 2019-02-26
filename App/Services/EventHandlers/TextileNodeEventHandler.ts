@@ -1,6 +1,5 @@
 import { Store } from 'redux'
 
-import { ILocalPhotoResult } from '../../Models/TextileTypes'
 import { Events, Update, ThreadUpdate, BlockType, NotificationInfo } from '@textile/react-native-sdk'
 import { RootState } from '../../Redux/Types'
 
@@ -8,7 +7,6 @@ import NotificationActions from '../../Redux/NotificationsRedux'
 import PhotoViewingActions from '../../Redux/PhotoViewingRedux'
 import ContactsActions from '../../Redux/ContactsRedux'
 import DeviceLogsActions from '../../Redux/DeviceLogsRedux'
-import StorageActions from '../../Redux/StorageRedux'
 import { toTypedNotification } from '../Notifications'
 
 import TextileEventsActions from '../../Redux/TextileEventsRedux'
@@ -25,12 +23,6 @@ export default class TextileNodeEventHandler {
   }
 
   setup () {
-    this.events.addListener('newLocalPhoto', (localPhoto: ILocalPhotoResult) => {
-      this.store.dispatch(StorageActions.newLocalPhoto(localPhoto))
-    })
-    this.events.addListener('newLocalPhoto', (localPhoto: ILocalPhotoResult) => {
-      this.store.dispatch(StorageActions.newLocalPhoto(localPhoto))
-    })
     // Now handled internally by sdk
     this.events.addListener('onOnline', () => {
       this.store.dispatch(TextileEventsActions.nodeOnline())
