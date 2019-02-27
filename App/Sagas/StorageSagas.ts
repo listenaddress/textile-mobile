@@ -1,5 +1,5 @@
 import {call, put, select, take} from 'redux-saga/effects'
-import CameraRoll, { LocalPhotoResult } from '@textile/react-native-camera-roll'
+import { LocalPhotoResult, requestLocalPhotos } from '@textile/react-native-camera-roll'
 import { SharedImage } from '../features/group/add-photo/models'
 import StorageActions, { StorageSelectors } from '../Redux/StorageRedux'
 import {ActionType, getType} from 'typesafe-actions'
@@ -34,12 +34,12 @@ export function * refreshLocalImages () {
   while (yield take(getType(StorageActions.refreshLocalImagesRequest))) {
     try {
       const autoPinEnabled = yield select(PreferencesSelectors.autoPinStatus)
-      if (autoPinEnabled) {
+      if (true) {
         // get time last checked
         const lastRefresh = yield select(StorageSelectors.lastPhotoRefresh)
         // update last time checked to now
         const currentRefresh = (new Date()).getTime()
-        const results: LocalPhotoResult[] = yield call(CameraRoll.requestLocalPhotos, lastRefresh)
+        const results: LocalPhotoResult[] = yield call(requestLocalPhotos, 0)
           // scan for images
         yield put(StorageActions.setLocalPhotoRefreshEpoch(currentRefresh))
       }
