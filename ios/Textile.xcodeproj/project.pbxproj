@@ -23,8 +23,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		551C262884FA47A8B7D59F27 /* libRNScreenControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEE29BED9A54C45A984E8CC /* libRNScreenControl.a */; };
-		70A4DFBE772C4E3A9C97EAC7 /* libRNCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A15F8870A6AA42EFBB5D8B62 /* libRNCameraRoll.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9356E1EA21F8FEFD00F6FACA /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9356E1E121F8FEDA00F6FACA /* libRNGestureHandler.a */; };
 		9356E2C921F905A200F6FACA /* libRNScreens.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9356E2C221F9059000F6FACA /* libRNScreens.a */; };
@@ -59,10 +57,12 @@
 		93F1805A21FD459700883267 /* Biotif-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93F1805721FD459700883267 /* Biotif-Medium.ttf */; };
 		93F1805B21FD459700883267 /* Biotif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93F1805821FD459700883267 /* Biotif-Regular.ttf */; };
 		93F1805D21FD49A900883267 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93F1805C21FD49A900883267 /* icomoon.ttf */; };
+		93F9F51B2226F95A0037A33A /* libRNCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F2415D2225CA2C0011F88E /* libRNCameraRoll.a */; };
+		93F9F51C2226F9760037A33A /* libRNTextile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2150F0721F3E0C30075B7FF /* libRNTextile.a */; };
+		93F9F51D2226F9930037A33A /* libRNScreenControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A27552CD21F28BED00C603F5 /* libRNScreenControl.a */; };
 		A2588A0F21F3F7A1007A1B62 /* TextileImageViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2588A0B21F3F7A0007A1B62 /* TextileImageViewManager.m */; };
 		A2588A1021F3F7A1007A1B62 /* TextileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2588A0C21F3F7A0007A1B62 /* TextileImageView.m */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		DA1E3E3D7BBB497DB7BBAA5F /* libRNTextile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A241645F9B64ADAAB20F86D /* libRNTextile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -571,6 +571,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F9F51D2226F9930037A33A /* libRNScreenControl.a in Frameworks */,
+				93F9F51C2226F9760037A33A /* libRNTextile.a in Frameworks */,
+				93F9F51B2226F95A0037A33A /* libRNCameraRoll.a in Frameworks */,
 				93CCA014220135C700639B38 /* libRCTContacts.a in Frameworks */,
 				9356E2C921F905A200F6FACA /* libRNScreens.a in Frameworks */,
 				9356E1EA21F8FEFD00F6FACA /* libRNGestureHandler.a in Frameworks */,
@@ -600,9 +603,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				551C262884FA47A8B7D59F27 /* libRNScreenControl.a in Frameworks */,
-				DA1E3E3D7BBB497DB7BBAA5F /* libRNTextile.a in Frameworks */,
-				70A4DFBE772C4E3A9C97EAC7 /* libRNCameraRoll.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
