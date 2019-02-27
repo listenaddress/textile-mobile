@@ -5,7 +5,7 @@ import { RootState } from '../../Redux/Types'
 
 import NotificationActions from '../../Redux/NotificationsRedux'
 import PhotoViewingActions from '../../Redux/PhotoViewingRedux'
-import ContactsActions from '../../Redux/ContactsRedux'
+import { contactsActions } from '../../features/contacts'
 import DeviceLogsActions from '../../Redux/DeviceLogsRedux'
 import { toTypedNotification } from '../Notifications'
 
@@ -51,7 +51,7 @@ export default class TextileNodeEventHandler {
       if (type === BlockType.JOIN) {
         // Every time the a JOIN block is detected, we should refresh our in-mem contact list
         // Enhancement: compare the joiner id with known ids and skip the refresh if known.
-        this.store.dispatch(ContactsActions.getContactsRequest())
+        this.store.dispatch(contactsActions.getContactsRequest())
       }
 
       // create a local log line for the threadUpdate event
