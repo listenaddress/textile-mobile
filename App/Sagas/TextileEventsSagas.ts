@@ -13,7 +13,7 @@ import Textile, {
 import { logNewEvent } from './DeviceLogs'
 import { pendingInvitesTask, cameraRollThreadCreateTask } from './ThreadsSagas'
 import { RootState } from '../Redux/Types'
-import { AsyncStorage } from 'react-native'
+import { photosActions } from '../features/photos'
 
 export function * startSagas () {
   yield all([
@@ -119,7 +119,7 @@ export function * nodeOnline () {
       yield call(logNewEvent, 'Node is:', 'online')
 
       // Check for new photos on every online event
-      yield put(StorageActions.refreshLocalImagesRequest())
+      yield put(photosActions.queryPhotos.request())
 
       const pending: string | undefined = yield select((state: RootState) => state.account.avatar.pending)
       if (pending) {
@@ -183,7 +183,7 @@ export function * stopNodeAfterDelayCancelled () {
       }
 
       // Check for new photos in case user left app and came back after taking one
-      yield put(StorageActions.refreshLocalImagesRequest())
+      yield put(photosActions.queryPhotos.request())
 
     } catch (error) {
       yield call(logNewEvent, 'stopNodeAfterDelayCancelled', error.message, true)
