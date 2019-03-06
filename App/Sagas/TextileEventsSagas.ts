@@ -118,7 +118,7 @@ export function * nodeOnline () {
       yield call(logNewEvent, 'Node is:', 'online')
 
       // Check for new photos on every online event
-      yield put(photosActions.queryPhotos.request())
+      yield put(photosActions.queryCameraRoll.request())
 
       const pending: string | undefined = yield select((state: RootState) => state.account.avatar.pending)
       if (pending) {
@@ -182,7 +182,7 @@ export function * stopNodeAfterDelayCancelled () {
       }
 
       // Check for new photos in case user left app and came back after taking one
-      yield put(photosActions.queryPhotos.request())
+      yield put(photosActions.queryCameraRoll.request())
 
     } catch (error) {
       yield call(logNewEvent, 'stopNodeAfterDelayCancelled', error.message, true)
